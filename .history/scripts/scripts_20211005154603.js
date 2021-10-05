@@ -12,9 +12,8 @@ function fakeLogin(){
         window.location.href="admin.html";
     }else if(id == stuU && passw == stuP){
         alert(id + "   " + passw)
-        window.location.href="user.html";
-    }
-    else{
+        window.location.href=";
+    }else{
         alert(`Nope: ${id} ${passw}`)
 
     }

@@ -10,7 +10,7 @@ function fakeLogin(){
     if(id == adminU && passw == adminP){
         alert(id + "   " + passw)
         window.location.href="admin.html";
-    }else if(id == stuU && passw == stuP){
+    }else if(id == adminU && passw == adminP){
         alert(id + "   " + passw)
         window.location.href="user.html";
     }

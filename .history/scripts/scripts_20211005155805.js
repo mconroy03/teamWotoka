@@ -3,7 +3,6 @@ function fakeLogin(){
     let passw = document.getElementById("inputPassword").value;
 
     let adminU = "admin@aurora.edu";
-    let adminP = "admin";
     let stuU = "student@aurora.edu";
     let stuP = "student";
 
@@ -13,8 +12,7 @@ function fakeLogin(){
     }else if(id == stuU && passw == stuP){
         alert(id + "   " + passw)
         window.location.href="user.html";
-    }
-    else{
+    }else{
         alert(`Nope: ${id} ${passw}`)
 
     }

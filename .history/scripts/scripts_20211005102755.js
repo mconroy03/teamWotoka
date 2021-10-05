@@ -1,4 +1,4 @@
-function fakeLogin(){
+function fakeLogin(form){
     let id = document.getElementById("inputEmail").value;
     let passw = document.getElementById("inputPassword").value;
 
@@ -9,12 +9,9 @@ function fakeLogin(){
 
     if(id == adminU && passw == adminP){
         alert(id + "   " + passw)
-        window.location.href="admin.html";
-    }else if(id == stuU && passw == stuP){
-        alert(id + "   " + passw)
-        window.location.href="user.html";
-    }
-    else{
+        location.href=
+
+    }else{
         alert(`Nope: ${id} ${passw}`)
 
     }
