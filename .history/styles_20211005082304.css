@@ -1,0 +1,17 @@
+/*Styles for the login page*/
+.form-signin{
+    align-content: center;
+    margin-left: 100px;
+}
+
+#inputEmail{
+    width: 20%;
+}
+
+#inputPassword{
+    width: 20%;
+}
+
+#signInButton{
+    width:20%;
+}

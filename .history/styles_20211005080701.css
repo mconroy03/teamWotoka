@@ -1,0 +1,15 @@
+/*Styles for the login page*/
+#inputEmail{
+    width: 20%;
+    background-color: yellow;
+}
+
+#inputPassword{
+    width: 20%;
+    align-content: center;
+    background-color: yellow;
+}
+
+#signInButton{
+    width:20%;
+}

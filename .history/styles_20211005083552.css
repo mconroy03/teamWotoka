@@ -1,0 +1,27 @@
+/*Styles for the login page*/
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* #inputEmail{
+    width: 20%;
+}
+
+#inputPassword{
+    width: 20%;
+}
+
+#signInButton{
+    width:20%;
+} */

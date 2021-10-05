@@ -1,0 +1,16 @@
+/*Styles for the login page*/
+.signIn_block{
+    align-items: center;
+}
+
+#inputEmail{
+    width: 20%;
+}
+
+#inputPassword{
+    width: 20%;
+}
+
+#signInButton{
+    width:20%;
+}

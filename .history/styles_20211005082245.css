@@ -1,0 +1,14 @@
+/*Styles for the login page*/
+.form
+
+#inputEmail{
+    width: 20%;
+}
+
+#inputPassword{
+    width: 20%;
+}
+
+#signInButton{
+    width:20%;
+}

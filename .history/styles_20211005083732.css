@@ -1,0 +1,22 @@
+/*Styles for the login page*/
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* #inputEmail{
+    width: 20%;
+}
+
+#inputPassword{
+    width: 20%;
+}
+
+?

@@ -1,0 +1,12 @@
+/*Styles for the login page*/
+#inputEmail{
+    width: 20%;
+}
+
+#inputPassword{
+    width: 20%;
+}
+
+#signInButton{
+    width:20%;
+}
