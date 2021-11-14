@@ -1,3 +1,0 @@
-function fakeLogin(form){
-    a
-}
