@@ -3,7 +3,6 @@ const session = require('express-session');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require("cors");
-const db = require('../teamWotoka/database');
 
 app.set('view engine', 'pug' );
 app.use(express.json());
@@ -17,6 +16,19 @@ app.use(session({
 }));
 
 app.use(cors());
+
+const db = mysql.createConnection({
+    user: "Wotoka_F2021",
+    host: "45.55.136.114",
+    password: "time4AChange!",
+    database: "Wotoka_F2021"
+})
+
+db.connect(function(err){
+    if (err) throw err;
+    console.log("Database Wotoka_F2021 is connected.")
+})
+
 
 
 app.get('/hello', (req, res) => {

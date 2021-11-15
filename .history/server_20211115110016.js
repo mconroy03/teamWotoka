@@ -3,7 +3,6 @@ const session = require('express-session');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require("cors");
-const db = require('../teamWotoka/database');
 
 app.set('view engine', 'pug' );
 app.use(express.json());
@@ -17,6 +16,7 @@ app.use(session({
 }));
 
 app.use(cors());
+
 
 
 app.get('/hello', (req, res) => {
