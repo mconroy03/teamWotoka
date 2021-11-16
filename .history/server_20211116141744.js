@@ -7,7 +7,7 @@ const db = require('../teamWotoka/database');
 
 app.set('view engine', 'pug' );
 app.use(express.json());
-app.use(express.static('views'));
+app.use();
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(session({

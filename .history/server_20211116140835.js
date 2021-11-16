@@ -20,7 +20,7 @@ app.use(cors());
 
 
 app.get('/hello', (req, res) => {
-    res.render('login');
+    res.render('');
 })
 
 

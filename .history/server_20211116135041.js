@@ -7,7 +7,7 @@ const db = require('../teamWotoka/database');
 
 app.set('view engine', 'pug' );
 app.use(express.json());
-app.use(express.static('views'));
+app.use(express.static("views"));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(session({
@@ -20,7 +20,7 @@ app.use(cors());
 
 
 app.get('/hello', (req, res) => {
-    res.render('login');
+    res.render('/login');
 })
 
 

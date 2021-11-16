@@ -4,10 +4,11 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require("cors");
 const db = require('../teamWotoka/database');
+const { dirname } = require('path/posix');
 
 app.set('view engine', 'pug' );
 app.use(express.json());
-app.use(express.static('views'));
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(session({
