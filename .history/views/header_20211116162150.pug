@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+
+
+
+header.py-3.mb-3.border-bottom
+  .container-fluid.d-grid.gap-3.align-items-center(style='grid-template-columns: 1fr 2fr;')
+    .dropdown
+      a#dropdownNavLink.d-flex.align-items-center.col-lg-4.mb-2.mb-lg-0.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
+        svg.bi.me-2(width='40' height='32')
+          use(xlink:href='#bootstrap')
+      ul.dropdown-menu.text-small.shadow(aria-labelledby='dropdownNavLink')
+        li
+          a.dropdown-item.active(href='#' aria-current='page') Overview
+        li
+          a.dropdown-item(href='#') Inventory
+        li
+          a.dropdown-item(href='#') Customers
+        li
+          a.dropdown-item(href='#') Products
+        li
+          hr.dropdown-divider
+        li
+          a.dropdown-item(href='#') Reports
+        li
+          a.dropdown-item(href='#') Analytics
+    .d-flex.align-items-center
+      form.w-100.me-3
+        input.form-control(type='search' placeholder='Search...' aria-label='Search')
+      .flex-shrink-0.dropdown
+        a#dropdownUser2.d-block.link-dark.text-decoration-none.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false')
+          img.rounded-circle(src='https://github.com/mdo.png' alt='mdo' width='32' height='32')
+        ul.dropdown-menu.text-small.shadow(aria-labelledby='dropdownUser2')
+          li
+            a.dropdown-item(href='#') New project...
+          li
+            a.dropdown-item(href='#') Settings
+          li
+            a.dropdown-item(href='#') Profile
+          li
+            hr.dropdown-divider
+          li
+            a.dropdown-item(href='#') Sign out
