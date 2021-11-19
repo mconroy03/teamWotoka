@@ -1,0 +1,13 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;            /* Footer height */
+  }
+  .form-signin{
+    display:flex;
+    flex-direction: c;
+    width:100px;
+    align-content: center;
+    justify-content: center;
+  }

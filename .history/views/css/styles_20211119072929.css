@@ -1,0 +1,40 @@
+/*Footer CSS*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;            /* Footer height */
+  }
+
+
+/*Login CSS*/
+  body.text-center{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+   
+  }
+  .form-floating{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  input#floatingInput.form-control{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input#floatingPassword.form-control{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  button.w-100.btn.btn-lg.btn-primary{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }

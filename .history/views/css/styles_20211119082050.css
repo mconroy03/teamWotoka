@@ -1,0 +1,93 @@
+/*Footer CSS*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;            /* Footer height */
+  }
+
+
+/*Login CSS*/
+  body.text-center{
+    margin-top: 10%;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+   
+  }
+  .form-floating{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  input#floatingInput.form-control{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input#floatingPassword.form-control{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  button.sign-in{
+    display:inline-block;
+    padding: 0.7em 1.7em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-align: none;
+    font-weight: 400;
+    color: white;
+    background-color: blue;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align: center;
+    position: relative;
+
+  }
+  img.mb-4{
+    width: 125px;
+    height: 104.2px;
+  }
+
+  /*User Landing Style*/
+
+.table-container{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.styled-table {
+  margin-left: auto;
+  margin-right: auto;
+    max-width: 80%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+  background-color: blue;
+  color: #ffffff;
+  text-align: left;
+}
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
