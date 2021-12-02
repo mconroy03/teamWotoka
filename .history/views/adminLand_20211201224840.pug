@@ -1,0 +1,45 @@
+include ./header.pug
+script.
+  var array = []
+  $.ajax({
+  method: 'GET',
+  url: 'http://localhost:8080/lostItemsAdmin',
+  success: function(response){
+  array = response;
+  buildTable(array)
+  console.log(array)
+  }
+  })
+  function buildTable(data){
+  var table = document.getElementById('myTable');
+  for(var i = 0; i < data.length){
+    var row = `<tr>
+    <td><t>`
+  }
+  }
+
+
+button.new-item Create New Lost Item
+.table-container 
+    table.styled-table
+        thead
+            tr
+            th Item ID
+            th Item Name
+            th Item Description
+            th Date Located
+            th Location Found
+            th Category
+            th Item Status 
+            th Item Value 
+            th Report ID 
+            th Finder ID 
+            th Claimer ID 
+            th Donated 
+            th Date Claimed
+        tbody#myTable
+
+
+
+
+include ./footer.pug

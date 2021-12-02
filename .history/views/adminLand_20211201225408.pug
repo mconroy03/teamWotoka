@@ -1,0 +1,61 @@
+include ./header.pug
+script.
+  var array = []
+  $.ajax({
+  method: 'GET',
+  url: 'http://localhost:8080/lostItemsAdmin',
+  success: function(response){
+  array = response;
+  buildTable(array)
+  console.log(array)
+  }
+  })
+  function buildTable(data){
+  var table = document.getElementById('myTable');
+  for(var i = 0; i < data.length; i++){
+    var row = `<tr>
+    <td>${data[i].ItemID}<td>
+    <td>${data[i].itemName}<td>
+    <td>${data[i].ItemDesc}<td>
+    <td>${data[i].DateFound}<td>
+    <td>${data[i].LocationFound}<td>
+    <td>${data[i].LocationDetails}<td>
+    <td>${data[i].ItemStatus}<td>
+    <td>${data[i].ItemValue}<td>
+    <td>${data[i].ReportID}<td>
+    <td>${data[i].FinderID}<td>
+    <td>${data[i].ClaimerID}<td>
+    <td>${data[i].Donated}<td>
+    <td>${data[i].DateClaimed}<td>
+    <td>${data[i].}<td>
+    <tr>`};
+    table.innerHTML += row;
+  }
+  }
+
+
+button.new-item Create New Lost Item
+.table-container 
+    table.styled-table
+        thead
+            tr
+            th Item ID
+            th Item Name
+            th Item Description
+            th Date Located
+            th Location Found
+            th Location Details
+            th Category
+            th Item Status 
+            th Item Value 
+            th Report ID 
+            th Finder ID 
+            th Claimer ID 
+            th Donated 
+            th Date Claimed
+        tbody#myTable
+
+
+
+
+include ./footer.pug
