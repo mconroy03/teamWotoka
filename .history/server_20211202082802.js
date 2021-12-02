@@ -30,8 +30,8 @@ app.post('/loginPOST', (req,res)=>{
                     console.log("admin session = " + req.session.AdminLoggedIn)
                     res.redirect('/admin')
                 }else{
-                    req.session.UserLoggedIn = true;
                     res.redirect('/userTable')
+                    res.session.UserLoggedIn = true;
                 }
             }else{
                 res.send('Incorrect login, try again')
@@ -58,21 +58,6 @@ app.get("/lostItemsAdmin", (req,res)=>{
     }
 })
 
-app.get("/lostItemUser", (req,res)=>{
-    console.log(req.session.UserLoggedIn)
-    if(req.session.UserLoggedIn){
-        db.query(
-            "SELECT * FROM Item",
-            (err2,result2)=>{
-                if(err2) throw err2;
-                console.log(result2)
-                res.send(result2)
-            }
-        )
-    }else{
-        res.send("You must log in first")
-    }
-})
 
 
 app.get('/', (req, res) => {

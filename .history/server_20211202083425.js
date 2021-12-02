@@ -30,8 +30,8 @@ app.post('/loginPOST', (req,res)=>{
                     console.log("admin session = " + req.session.AdminLoggedIn)
                     res.redirect('/admin')
                 }else{
-                    req.session.UserLoggedIn = true;
-                    res.redirect('/userTable')
+                    
+                    res.session.UserLoggedIn = true;
                 }
             }else{
                 res.send('Incorrect login, try again')

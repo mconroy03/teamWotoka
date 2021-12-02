@@ -12,19 +12,19 @@ script.
   }
   })
   function buildTable(data){
-  var table = document.getElementById('myTableUser');
+  var table = document.getElementById('myTable');
   for(var i = 0; i < data.length; i++){
     var row = `<tr>
     <td>${data[i].ItemID}</td>
     <td>${data[i].itemName}</td>
     <td>${moment(data[i].DateFound).format('MM/DD/YYYY')}</td>
-    <td>${data[i].ItemCategory}</td>
+    <td>${data[i].LocationFound}</td>
     </tr>`;
     table.innerHTML += row;
   }
   }
 
-h1.user Items Available
+
 .table-container 
     table.styled-table
         thead
@@ -33,7 +33,7 @@ h1.user Items Available
             th Item Name
             th Date Located
             th Category
-        tbody#myTableUser
+        tbody
 
 
 

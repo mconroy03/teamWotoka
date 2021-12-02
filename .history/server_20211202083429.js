@@ -30,7 +30,7 @@ app.post('/loginPOST', (req,res)=>{
                     console.log("admin session = " + req.session.AdminLoggedIn)
                     res.redirect('/admin')
                 }else{
-                    req.session.UserLoggedIn = true;
+                    res.session.UserLoggedIn = true;
                     res.redirect('/userTable')
                 }
             }else{
