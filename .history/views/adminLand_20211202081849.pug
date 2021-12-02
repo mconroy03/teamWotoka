@@ -27,7 +27,7 @@ script.
     <td>${data[i].FinderID}</td>
     <td>${data[i].ClaimerID}</td>
     <td>${data[i].Donated}</td>
-    <td>${moment(data[i].DateClaimed).format('MM/DD/YYYY')}</td>
+    <td>${moment(data[i].DateClaimed).format()}</td>
     </tr>`;
     table.innerHTML += row;
   }

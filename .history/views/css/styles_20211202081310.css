@@ -80,7 +80,7 @@ footer {
     padding: 12px 15px;
 }
 .styled-table td{
-  width: 0.1%;
+  width: 1px;
   white-space: nowrap;
 }
 .styled-table tbody tr {

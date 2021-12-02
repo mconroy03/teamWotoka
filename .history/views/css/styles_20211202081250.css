@@ -81,7 +81,7 @@ footer {
 }
 .styled-table td{
   width: 0.1%;
-  white-space: nowrap;
+  
 }
 .styled-table tbody tr {
   border-bottom: 1px solid #dddddd;

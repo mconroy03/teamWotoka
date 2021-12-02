@@ -17,7 +17,7 @@ script.
     <td>${data[i].ItemID}</td>
     <td>${data[i].itemName}</td>
     <td>${data[i].ItemDesc}</td>
-    <td>${moment(data[i].DateFound).format('MM/DD/YYYY')}</td>
+    <td>${moment(data[i].DateFound}</td>
     <td>${data[i].LocationFound}</td>
     <td>${data[i].LocationDetails}</td>
     <td>${data[i].ItemCategory}</td>
@@ -27,7 +27,7 @@ script.
     <td>${data[i].FinderID}</td>
     <td>${data[i].ClaimerID}</td>
     <td>${data[i].Donated}</td>
-    <td>${moment(data[i].DateClaimed).format('MM/DD/YYYY')}</td>
+    <td>${data[i].DateClaimed}</td>
     </tr>`;
     table.innerHTML += row;
   }

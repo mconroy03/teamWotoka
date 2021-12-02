@@ -14,21 +14,21 @@ script.
   var table = document.getElementById('myTable');
   for(var i = 0; i < data.length; i++){
     var row = `<tr>
-    <td>${data[i].ItemID}</td>
-    <td>${data[i].itemName}</td>
-    <td>${data[i].ItemDesc}</td>
-    <td>${moment(data[i].DateFound).format('MM/DD/YYYY')}</td>
-    <td>${data[i].LocationFound}</td>
-    <td>${data[i].LocationDetails}</td>
-    <td>${data[i].ItemCategory}</td>
-    <td>${data[i].ItemStatus}</td>
-    <td>${data[i].ItemValue}</td>
-    <td>${data[i].ReportID}</td>
-    <td>${data[i].FinderID}</td>
-    <td>${data[i].ClaimerID}</td>
-    <td>${data[i].Donated}</td>
-    <td>${moment(data[i].DateClaimed).format('MM/DD/YYYY')}</td>
-    </tr>`;
+    <td style="background-color:yellow">${data[i].ItemID}<td>
+    <td>${data[i].itemName}<td>
+    <td>${data[i].ItemDesc}<td>
+    <td>${data[i].DateFound}<td>
+    <td>${data[i].LocationFound}<td>
+    <td>${data[i].LocationDetails}<td>
+    <td>${data[i].ItemCategory}<td>
+    <td>${data[i].ItemStatus}<td>
+    <td>${data[i].ItemValue}<td>
+    <td>${data[i].ReportID}<td>
+    <td>${data[i].FinderID}<td>
+    <td>${data[i].ClaimerID}<td>
+    <td>${data[i].Donated}<td>
+    <td>${data[i].DateClaimed}<td>
+    <tr>`;
     table.innerHTML += row;
   }
   }
