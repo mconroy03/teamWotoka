@@ -126,9 +126,8 @@ app.get('/', (req, res) => {
 app.get('/itemSubmission', (req, res)=>{
     res.render('itemSubmission');
 });
-
-app.get('/updateItem', (req, res)=>{
-    res.render('updateItem');
+app.get('/itemSubmission', (req, res)=>{
+    res.render('itemSubmission');
 });
 
 app.get('/login', (req, res) => {

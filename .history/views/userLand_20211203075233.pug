@@ -1,9 +1,10 @@
 include ./header.pug
+
 script.
   var array = []
   $.ajax({
   method: 'GET',
-  url: 'http://localhost:8080/lostItemsAdmin',
+  url: 'http://localhost:8080/lostItemUser',
   success: function(response){
   array = response;
   buildTable(array)
@@ -16,50 +17,27 @@ script.
     var row = `<tr>
     <td>${data[i].ItemID}</td>
     <td>${data[i].itemName}</td>
-    <td>${data[i].ItemDesc}</td>
     <td>${moment(data[i].DateFound).format('MM/DD/YYYY')}</td>
-    <td>${data[i].LocationFound}</td>
-    <td>${data[i].LocationDetails}</td>
     <td>${data[i].ItemCategory}</td>
-    <td>${data[i].ItemStatus}</td>
-    <td>${data[i].ItemValue}</td>
-    <td>${data[i].ReportID}</td>
-    <td>${data[i].FinderID}</td>
-    <td>${data[i].ClaimerID}</td>
-    <td>${data[i].Donated}</td>
-    <td>${moment(data[i].DateClaimed).format('MM/DD/YYYY')}</td>
-    <td><a href="/updateItem">
-      <button>Update Item</button>
-    </a></td>
     </tr>`;
     table.innerHTML += row;
   }
   }
 
+
 h2 Search for an item
 input#myInput(type='text', onkeyup='myFunction()', placeholder='Search for an item...', title='Type in a item')
-a.button( href="itemSubmission") New Lost Item
+
+h1.user Items Available
 .table-container 
     table.styled-table
         thead
             tr
             th Item ID
             th Item Name
-            th Item Description
             th Date Located
-            th Location Found
-            th Location Details
             th Category
-            th Item Status 
-            th Item Value 
-            th Report ID 
-            th Finder ID 
-            th Claimer ID 
-            th Donated 
-            th Date Claimed
-            th Update Item
         tbody#myTable
-
 
 
 

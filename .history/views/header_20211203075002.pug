@@ -9,16 +9,11 @@ script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity='sha256-/xUj+
 script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous")
 script(src='functions.js')
 
+
 header.p-3.mb-3.border-bottom
   .container
     .d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-lg-start
       a.d-flex.align-items-center.mb-2.mb-lg-0.text-dark.text-decoration-none(href='/')
       ul.nav.col-12.col-lg-auto.me-lg-auto.mb-2.justify-content-center.mb-md-0
-        li
-          a.nav-link.px-2.link-secondary(href='#') Overview
-        li
-          a.nav-link.px-2.link-dark(href='#') Inventory
-        li
-          a.nav-link.px-2.link-dark(href='#') Customers
-        li
-          a.nav-link.px-2.link-dark(href='#') Products
+      form.col-12.col-lg-auto.mb-3.mb-lg-0.me-lg-3
+        input.form-control#myInput(type='text' onekeyup='myFunction()' placeholder='Search...' title='Type in an item')

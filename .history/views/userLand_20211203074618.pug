@@ -12,9 +12,10 @@ script.
   }
   })
   function buildTable(data){
-  var table = document.getElementById('myTable');
+  var table = document.getElementById('myTableUser');
   for(var i = 0; i < data.length; i++){
     var row = `<tr>
+    <td>${data[i].ItemID}</td>
     <td>${data[i].itemName}</td>
     <td>${moment(data[i].DateFound).format('MM/DD/YYYY')}</td>
     <td>${data[i].ItemCategory}</td>
@@ -22,20 +23,18 @@ script.
     table.innerHTML += row;
   }
   }
-
-
-h2 Search for an item
-input#myInput(type='text', onkeyup='myFunction()', placeholder='Search for an item...', title='Type in a item')
+  input#myInput(type='text', onkeyup='myFunction()', placeholder='Search for an item...', title='Type in a item')
 
 h1.user Items Available
 .table-container 
     table.styled-table
         thead
             tr
+            th Item ID
             th Item Name
             th Date Located
             th Category
-        tbody#myTable
+        tbody#myTableUser
 
 
 

@@ -28,16 +28,12 @@ script.
     <td>${data[i].ClaimerID}</td>
     <td>${data[i].Donated}</td>
     <td>${moment(data[i].DateClaimed).format('MM/DD/YYYY')}</td>
-    <td><a href="/updateItem">
-      <button>Update Item</button>
-    </a></td>
     </tr>`;
     table.innerHTML += row;
   }
   }
 
-h2 Search for an item
-input#myInput(type='text', onkeyup='myFunction()', placeholder='Search for an item...', title='Type in a item')
+
 a.button( href="itemSubmission") New Lost Item
 .table-container 
     table.styled-table
@@ -57,7 +53,6 @@ a.button( href="itemSubmission") New Lost Item
             th Claimer ID 
             th Donated 
             th Date Claimed
-            th Update Item
         tbody#myTable
 
 
