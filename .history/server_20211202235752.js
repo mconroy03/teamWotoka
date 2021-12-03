@@ -48,15 +48,11 @@ app.post("/newFinder", (req, res)=>{
     var first = req.body.finderFName;
     var last = req.body.finderLName;
     var phone = req.body.phoneNum;
-    const finder = [
-        id, first, last, phone
-    ]
     db.query(
         "INSERT INTO Finder (FinderID, FinderFName, FinderLName, FinderPhone) VALUES (?)",
         [finder], (err, result)=>{
             if(err) throw err;
-            console.log(` New Finder Item: ${result}`)
-            res.send(`New Finder Submitted!`)
+            
         }
     )
 })

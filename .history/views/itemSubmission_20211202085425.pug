@@ -1,0 +1,10 @@
+doctype html
+html(lang='en')
+
+
+h1.itemSub Enter Item Information 
+
+form.login-style(action='/itemPOST' method='POST')
+    input#floatingInput.form-control(type='text' placeholder='Ex: John Smith' name='ItemName' required='')
+    input#floatingInput.form-control(type='text' placeholder='Color, ' name='ItemDesc' required='')
+    input#floatingInput.form-control(type='date'  name='ItemDesc' required='')

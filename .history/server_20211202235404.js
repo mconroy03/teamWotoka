@@ -43,24 +43,6 @@ app.post('/loginPOST', (req,res)=>{
    
 })
 
-app.post("/newFinder", (req, res)=>{
-    var id = req.body.finderID;
-    var first = req.body.finderFName;
-    var last = req.body.finderLName;
-    var phone = req.body.phoneNum;
-    const finder = [
-        id, first, last, phone
-    ]
-    db.query(
-        "INSERT INTO Finder (FinderID, FinderFName, FinderLName, FinderPhone) VALUES (?)",
-        [finder], (err, result)=>{
-            if(err) throw err;
-            console.log(` New Finder Item: ${result}`)
-            res.send(`New Finder Submitted!`)
-        }
-    )
-})
-
 app.post("/newItem", (req, res)=>{
     var itemName = req.body.itemName;
     var finderID = req.body.finderID;
@@ -81,7 +63,7 @@ app.post("/newItem", (req, res)=>{
         [vals], (err, result) =>{
             if(err) throw err;
             console.log(`Inserted Item: ${result}`)
-            res.send(`Item Submitted!`)
+            res.send(`Item Submitted! `)
         }
     )
 })

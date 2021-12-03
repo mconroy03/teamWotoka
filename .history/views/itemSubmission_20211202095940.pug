@@ -1,0 +1,38 @@
+doctype html
+html(lang='en')
+
+
+h1.itemSub Enter Item Information 
+
+form.login-style(style='max-width:400px; margin:auto' action='/newItem' method='POST')
+  .form-group
+    label(for='') Item name:
+    input.form-control(type='text' name='itemName')
+  .form-group
+    label(for='') Name of person who found item:
+    input.form-control(type='text' name='personFound')
+  .form-group
+    label(for='email') Finder's ID:
+    input.form-control(type='text' name='userID')
+  .form-group
+    label(for='email') Finder's Phone:
+    input.form-control(type='text' name='phoneNum')
+  .form-group
+    label(for='') Date:
+    input.form-control(type='date' name='dateFound')
+  .form-group
+    label(for='')
+    input.form-control(type='time' name='timeFound')
+  .form-group
+    label(for='') Describe the item:
+    textarea(cols='54' rows='4' name='description')
+  .form-group
+    label(for='') Location Found:
+    input.form-control(type='text' name='locationFound')
+  .form-group
+    label(for='') Location Details:
+    textarea(cols='54' rows='4' name='locationDetails')
+  .form-group
+    label(for='') Item value:
+    input.form-control(type='text' name='itemValue')
+  button.btn.btn-lg.btn-primary(type='submit') Add Item

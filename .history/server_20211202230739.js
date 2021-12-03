@@ -4,7 +4,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require("cors");
 const db = require('../teamWotoka/database');
-const { stat } = require('fs');
 
 app.set('view engine', 'pug' );
 app.use(express.json());
@@ -43,27 +42,12 @@ app.post('/loginPOST', (req,res)=>{
    
 })
 
-app.post("/newFinder", (req, res)=>{
-    var id = req.body.finderID;
-    var first = req.body.finderFName;
-    var last = req.body.finderLName;
-    var phone = req.body.phoneNum;
-    const finder = [
-        id, first, last, phone
-    ]
-    db.query(
-        "INSERT INTO Finder (FinderID, FinderFName, FinderLName, FinderPhone) VALUES (?)",
-        [finder], (err, result)=>{
-            if(err) throw err;
-            console.log(` New Finder Item: ${result}`)
-            res.send(`New Finder Submitted!`)
-        }
-    )
-})
-
 app.post("/newItem", (req, res)=>{
     var itemName = req.body.itemName;
+    var finderFName = req.body.finderFName;
+    var finderLName = req.body.finderLName;
     var finderID = req.body.finderID;
+    var phoneNum = req.body.phoneNum;
     var dateFound = req.body.dateFound;
     var itemCat = req.body.itemCat;
     var desc = req.body.description;
@@ -73,17 +57,8 @@ app.post("/newItem", (req, res)=>{
     var status = req.body.itemStatus;
 
     const vals = [
-        desc, dateFound, status, value, itemCat, location, locateDet,
-        itemName, finderID, null, false, null
+        itemName, 
     ]
-    db.query(
-        "INSERT INTO Item (itemDesc, DateFound, ItemStatus, ItemValue, ItemCategory, LocationFound, LocationDetails, itemName, FinderID, ClaimerID, Donated, DateClaimed) VALUES (?)",
-        [vals], (err, result) =>{
-            if(err) throw err;
-            console.log(`Inserted Item: ${result}`)
-            res.send(`Item Submitted!`)
-        }
-    )
 })
 
 app.get("/lostItemsAdmin", (req,res)=>{
